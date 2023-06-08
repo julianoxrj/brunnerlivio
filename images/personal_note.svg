@@ -10,20 +10,22 @@
 
         .blink {
           animation: blink-animation 1s steps(5, start) infinite;
-        }
-
-        .blink-text:before {
-          content: "Data Science";
+          animation-delay: 3s; /* Atraso de 3 segundos antes de começar a piscar */
         }
 
         @keyframes blink-animation {
-          to {
-            visibility: hidden;
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
           }
         }
       </style>
-      <strong>My Name is Livio and I like <span class="blink blink-text"></span></strong>
+      <strong>My Name is Livio and I like <span class="blink">Data Science</span></strong>
     </div>
   </foreignObject>
 </svg>
-
